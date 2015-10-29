@@ -1,0 +1,11 @@
+*.pyc
+*.cache
+*#*
+*.egg-info
+*.egg
+.DS_Store
+.ropeproject
+.idea
+dist
+env
+.venv
