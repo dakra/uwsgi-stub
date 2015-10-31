@@ -11,7 +11,7 @@ with open(path.join(here, 'CHANGES.txt'), encoding='utf-8') as f:
 
 setup(
     name='uwsgi-stub',
-    version='0.1',
+    version='0.1.1',
 
     description='A stub file with correct signatures and docstrings for the python uwsgi module',
     long_description=README + '\n\n' + CHANGES,
@@ -33,5 +33,5 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     keywords='uwsgi',
-    #py_modules=['uwsgi'],
+    py_modules=['uwsgi'],
 )
