@@ -435,6 +435,15 @@ def add_cron(signal, minute, hour, day, month, weekday):
     :param weekday: The weekday on which to run this event. This is "OR"ed with ``day``. (In accordance with the POSIX standard, 0 is Sunday, 6 is Monday)
     """
 
+
+def add_var(key, value):
+    """Add uwsgi variable ``key`` with value ``value``
+
+    :param str key: Variable name
+    :param str value: Variable value
+    """
+
+
 def register_rpc():
     """Register rpc."""
 
@@ -679,6 +688,7 @@ def sharedarea_readlong(pos):
     :rtype: int
     """
 
+
 def sharedarea_writelong(pos, val):
     """Write a 64-bit (8-byte) long into the uWSGI :doc:`SharedArea`.
 
@@ -723,6 +733,44 @@ def erlang_connect(address):
 
 def erlang_rpc(node, module, function, argument):
     """erlang_rpc."""
+
+
+def websocket_handshake(http_sec_websocket_key=None, http_origin=None):
+    """Waits for websocket handshake.
+
+    :param http_sec_websocket_key: Optional HTTP_SEC_WEBSOCKET_KEY
+    :param http_origin: Optional HTTP_ORIGIN
+    """
+
+
+def websocket_send(data):
+    """Send ``data`` to websocket.
+
+    :param str data: data to send
+    """
+
+
+def websocket_send_binary(data):
+    """Send ``data`` to websocket.
+
+    :param data: data to send
+    """
+
+
+def websocket_recv():
+    """Receive data from websocket.
+
+    :return: The received data
+    :rtype: str
+    """
+
+
+def websocket_recv_nb():
+    """Receive data from websocket (non-blocking).
+
+    :return: The received data
+    :rtype: str
+    """
 
 
 raise ImportError("No module named 'uwsgi'")
